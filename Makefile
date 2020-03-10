@@ -3,6 +3,9 @@
 all :
 	dune build @all
 
+install:
+	dune build @install
+
 clean :
 	rm -rf _build || true
 	rm *.vo || true

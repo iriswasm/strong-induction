@@ -18,7 +18,7 @@ Section StrongInduction.
     exfalso; inversion H.
   Qed.
 
-  Hint Resolve P0.
+  Hint Resolve P0 : core.
 
   Lemma pred_increasing : forall n m,
       n <= m ->
@@ -30,7 +30,7 @@ Section StrongInduction.
     destruct m; eauto.
   Qed.
 
-  Hint Resolve le_S_n.
+  Hint Resolve le_S_n : core.
 
   (** * Strengthen the induction hypothesis. *)
 
