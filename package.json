@@ -1,7 +1,7 @@
 {
   "name": "StrongInduction",
   "version": "1.0",
-  "description": "Provides a strong induction lemma",
+  "description": "The strong induction over natural numbers.",
   "esy": {
     "build": "dune build -p #{self.name}",
 		"install": "dune install --prefix=#{self.install}",
@@ -10,6 +10,9 @@
   "dependencies": {
     "@opam/dune": "*",
     "@opam/coq": "*"
-  }
+  },
+	"resolutions": {
+		"@opam/dune": "github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34"
+	}
 }
 

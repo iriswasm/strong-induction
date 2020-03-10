@@ -1,6 +1,6 @@
 {
-  "checksum": "e162f32e3e8dfe14af7d50a088c97a86",
-  "root": "Strong-induction@link-dev:./package.json",
+  "checksum": "7e8a52516d0f3a469cd61ed7860dff3a",
+  "root": "StrongInduction@link-dev:./package.json",
   "node": {
     "ocaml@4.9.0@d41d8cd9": {
       "id": "ocaml@4.9.0@d41d8cd9",
@@ -16,9 +16,9 @@
       "dependencies": [],
       "devDependencies": []
     },
-    "Strong-induction@link-dev:./package.json": {
-      "id": "Strong-induction@link-dev:./package.json",
-      "name": "Strong-induction",
+    "StrongInduction@link-dev:./package.json": {
+      "id": "StrongInduction@link-dev:./package.json",
+      "name": "StrongInduction",
       "version": "link-dev:./package.json",
       "source": {
         "type": "link-dev",
@@ -27,7 +27,8 @@
       },
       "overrides": [],
       "dependencies": [
-        "@opam/dune@opam:1.11.4@a7ccb7ae", "@opam/coq@opam:8.11.0@15e90e83"
+        "@opam/dune@github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34@d41d8cd9",
+        "@opam/coq@opam:8.11.0@15e90e83"
       ],
       "devDependencies": []
     },
@@ -88,21 +89,17 @@
       ],
       "devDependencies": [ "ocaml@4.9.0@d41d8cd9" ]
     },
-    "@opam/dune@opam:1.11.4@a7ccb7ae": {
-      "id": "@opam/dune@opam:1.11.4@a7ccb7ae",
+    "@opam/dune@github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34@d41d8cd9": {
+      "id":
+        "@opam/dune@github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34@d41d8cd9",
       "name": "@opam/dune",
-      "version": "opam:1.11.4",
+      "version":
+        "github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34",
       "source": {
         "type": "install",
         "source": [
-          "archive:https://opam.ocaml.org/cache/sha256/77/77cb5f483221b266ded2b85fc84173ae0089a25134a086be922e82c131456ce6#sha256:77cb5f483221b266ded2b85fc84173ae0089a25134a086be922e82c131456ce6",
-          "archive:https://github.com/ocaml/dune/releases/download/1.11.4/dune-build-info-1.11.4.tbz#sha256:77cb5f483221b266ded2b85fc84173ae0089a25134a086be922e82c131456ce6"
-        ],
-        "opam": {
-          "name": "dune",
-          "version": "1.11.4",
-          "path": "esy.lock/opam/dune.1.11.4"
-        }
+          "github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34"
+        ]
       },
       "overrides": [],
       "dependencies": [

@@ -1,0 +1,5 @@
+(coq.theory
+  (name StrongInduction)
+  (package StrongInduction)
+  (synopsis "The strong induction over natural numbers."))
+

@@ -15,6 +15,5 @@ Makefile.coq
 \#*\#
 *.swp
 
-*.opam
 *.install
 

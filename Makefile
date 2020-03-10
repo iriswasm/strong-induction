@@ -8,7 +8,8 @@ install:
 
 clean :
 	rm -rf _build || true
-	rm *.vo || true
-	rm *.glob || true
-	rm *.aux || true
+	rm theories/*.vo || true
+	rm theories/*.glob || true
+	rm theories/*.aux || true
+	rm *.install || true
 
