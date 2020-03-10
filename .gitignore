@@ -1,3 +1,17 @@
 *.aux
 *.glob
 *.vo
+*.d
+*.vok
+*.vos
+
+CoqMakefile.conf
+Makefile.coq
+/_esy/
+/node_modules/
+/_build/
+
+*~
+\#*\#
+*.swp
+

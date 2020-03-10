@@ -1,0 +1,17 @@
+{
+  "name": "Strong-induction",
+  "version": "1.0",
+  "description": "Provides a strong induction lemma",
+  "esy": {
+    "build": "make",
+    "buildsInSource": "_build"
+  },
+  "scripts": {
+    "build": "make build"
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@opam/coq": "*"
+  }
+}
+
