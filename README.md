@@ -1,4 +1,5 @@
 # Strong induction
+[![Build Status](https://travis-ci.org/Mbodin/strong-induction.svg?branch=master)](https://travis-ci.org/Mbodin/strong-induction)
 
 [StrongInduction.v](StrongInduction.v) provides the principle of strong induction
 over natural numbers:
