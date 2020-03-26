@@ -5,7 +5,7 @@ Require Import PeanoNat.
 
 Section StrongInduction.
 
-  Variable P:nat -> Prop.
+  Variable P : nat -> Type.
 
   (** The stronger inductive hypothesis given in strong induction. The standard
     [nat] induction principle provides only [n = pred m], with [P 0] required
@@ -21,36 +21,36 @@ Section StrongInduction.
   Hint Resolve P0 : core.
 
   Lemma pred_increasing : forall n m,
-      n <= m ->
-      Nat.pred n <= Nat.pred m.
+    n <= m ->
+    Nat.pred n <= Nat.pred m.
   Proof.
-    induction n; cbn; intros.
-    apply le_0_n.
-    induction H; subst; cbn; eauto.
-    destruct m; eauto.
+    induction n; simpl; intros.
+    - apply le_0_n.
+    - induction H; subst; simpl; auto.
+      destruct m; auto.
   Qed.
-
-  Hint Resolve le_S_n : core.
 
   (** * Strengthen the induction hypothesis. *)
 
-  Local Lemma strong_induction_all : forall n,
-      (forall m, m <= n -> P m).
+  Local Lemma strong_rect_all : forall n,
+    (forall m, m <= n -> P m).
   Proof.
-    induction n; intros;
-      match goal with
-      | [ H: _ <= _ |- _ ] =>
-        inversion H
-      end; eauto.
+    induction n.
+    - intros m H. assert (m = 0).
+      { inversion H. auto. }
+      subst. auto.
+    - intros m H. apply IH.
+      intros m' H'. apply IHn.
+      apply le_S_n. eapply Nat.le_trans; eauto.
   Qed.
 
-  Theorem strong_induction : forall n, P n.
+  Theorem strong_rect : forall n, P n.
   Proof.
-    eauto using strong_induction_all.
+    eauto using strong_rect_all.
   Qed.
 
 End StrongInduction.
 
-Tactic Notation "strong" "induction" ident(n) := induction n using strong_induction.
+Definition strong_induction (P : nat -> Prop) := strong_rect P.
 
-(* TODO: version over [Type]. *)
+Tactic Notation "strong" "induction" ident(n) := induction n using strong_rect.
