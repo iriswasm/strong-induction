@@ -1,5 +1,5 @@
 (** Here we prove the principle of strong induction, induction on the natural
-numbers where the inductive hypothesis includes all smaller natural numbers. *)
+  numbers where the inductive hypothesis includes all smaller natural numbers. *)
 
 Require Import PeanoNat.
 
@@ -8,8 +8,8 @@ Section StrongInduction.
   Variable P:nat -> Prop.
 
   (** The stronger inductive hypothesis given in strong induction. The standard
-  [nat ] induction principle provides only n = pred m, with [P 0] required
-  separately. *)
+    [nat] induction principle provides only [n = pred m], with [P 0] required
+    separately. *)
   Hypothesis IH : forall m, (forall n, n < m -> P n) -> P m.
 
   Lemma P0 : P 0.
@@ -52,3 +52,5 @@ Section StrongInduction.
 End StrongInduction.
 
 Tactic Notation "strong" "induction" ident(n) := induction n using strong_induction.
+
+(* TODO: version over [Type]. *)

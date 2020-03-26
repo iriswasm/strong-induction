@@ -1,7 +1,7 @@
 {
   "name": "StrongInduction",
   "version": "1.0",
-  "description": "The strong induction over natural numbers.",
+  "description": "Induction principles over natural numbers.",
   "esy": {
     "build": "dune build -p #{self.name}",
 		"install": "dune install --prefix=#{self.install}",
