@@ -1,18 +1,20 @@
 {
-  "name": "StrongInduction",
-  "version": "1.0",
-  "description": "Induction principles over natural numbers.",
-  "esy": {
-    "build": "dune build -p #{self.name}",
-		"install": "dune install --prefix=#{self.install}",
-    "buildsInSource": "_build"
-  },
-  "dependencies": {
-    "@opam/dune": "*",
-    "@opam/coq": "*"
-  },
-	"resolutions": {
-		"@opam/dune": "github:ocaml/dune:dune.opam#ccd447e41a711f8a52bc854d71dba8677c900c34"
+	"name": "StrongInduction",
+	"version": "1.0",
+	"description": "Induction principles over natural numbers.",
+	"esy": {
+		"buildEnv": {
+			"COQBIN": "#{@opam/coq.bin}/",
+			"COQLIB": "#{@opam/coq.lib}/coq/",
+			"HOME": "#{self.install}"
+		},
+		"build": "dune build -p #{self.name}",
+		"buildsInSource": "_build"
+	},
+	"dependencies": {
+		"@opam/dune": ">=2.3",
+		"@opam/coq": "*",
+		"@opam/ocamlfind": "1.8.1"
 	}
 }
 
