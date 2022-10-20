@@ -14,7 +14,7 @@
 	"dependencies": {
 		"@opam/dune": ">=2.3",
 		"@opam/coq": "*",
-		"@opam/ocamlfind": "1.8.1"
+		"@opam/ocamlfind": "*"
 	}
 }
 
